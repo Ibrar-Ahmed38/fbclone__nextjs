@@ -5,8 +5,6 @@ export default function Home() {
   return (
     <>
 
-
-
      <div className="bg-red-700 h-52">
         <h1 className="text-center text-white text-2xl pt-8">Mrs MASSEUR</h1>
        
@@ -20,7 +18,7 @@ export default function Home() {
             <h1 className="text-center  text-3xl  mb-6">Sign Up Today</h1>
           <div className="">
             <form className="space-y-4 ">
-              <div className="">
+              <div>
                 <label className="block">Select Account type</label>
                
                 <input
