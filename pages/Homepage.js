@@ -4,9 +4,9 @@ import "tailwindcss/tailwind.css";
 const Homepage = () => {
     return (
         <div className="">
-            <div className="flex bg-black ">
-                <div className=" px-24 py-24 pt-40 mb-10">
-                    <div className="mb-12">
+            <div className="flex flex-wrap bg-black ">
+                <div className=" px-24 py-24 pt-40">
+                    <div className="mb-12 mx-auto items-center">
                         <h2 className="text-3xl mb-2 text-white font-medium ">Find</h2>
                         <h1 className=" text-6xl text-white mb-4 font-bold"> Gay-Friendly male</h1>
                         <h1 className="text-6xl text-white font-bold ">Masseur near you</h1>
