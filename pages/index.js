@@ -1,75 +1,59 @@
+import React from 'react'
 import "tailwindcss/tailwind.css";
-import styles from '../styles/Home.module.css'
+import Hompage from './Homepage'
+import Services from './services'
+import About from './about';
 
-export default function Home() {
+const index = () => {
   return (
-    <>
+    <div>
+      	<nav className="bg-white shadow-lg">
+			<div className="max-w-6xl mx-auto px-4">
+				<div className="flex justify-between">
+					<div className="flex space-x-7">
+						<div>
+							{/* <!-- Website Logo --> */}
+							<a href="" className="flex items-center py-4 px-2">
+								
+								<span className="font-semibold text-3xl text-black-500 text-lg">Mr Messeur</span>
+							</a>
+						</div>
+						{/* <!-- Primary Navbar items --> */}
+					
+					</div>
+					{/* <!-- Secondary Navbar items --> */}
+					<div className="hidden md:flex items-center space-x-3 ">
+						<a href="" className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-red-700 hover:text-white transition duration-300">Log In</a>
+						<a href="/signup" className="py-2 px-2 font-medium w-32 text-center text-white bg-red-700 rounded hover:bg-red-900 transition duration-300">Sign Up</a>
+					</div>
+					{/* <!-- Mobile menu button --> */}
+					<div className="md:hidden flex items-center">
+						<button className="outline-none mobile-menu-button">
+				
+					</button>
+					</div>
+				</div>
+			</div>
+			{/* <!-- mobile menu --> */}
+			<div className="hidden mobile-menu">
+				<ul className="">
+					<li className="active"><a href="index.html" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
+					<li><a href="#services" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
+					<li><a href="#about" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+					<li><a href="#contact" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+				</ul>
+			</div>
+		
+		</nav>
 
-     <div className="bg-red-700 h-52">
-        <h1 className="text-center text-white text-2xl pt-8">Mrs MASSEUR</h1>
-       
-      </div> 
-        <div className="pt-14 flex items-center -mt-44  md:w-full rounded-md justify-center">
-          <div className="bg-white p-6 border-2 rounded shadow-2x w-10/12 md:w-4/12">
-            <h1 className="text-center text-2xl text-gray-400 mb-2">
-              Create an account
-            </h1>
+		<Hompage />
+		<About/>
+		<Services/>
+		
+    </div>
 
-            <h1 className="text-center  text-3xl  mb-6">Sign Up Today</h1>
-          <div className="">
-            <form className="space-y-4 ">
-              <div>
-                <label className="block">Select Account type</label>
-               
-                <input
-                  type="text"
-                  className="w-full outline-none h-10 bg-gray-50 border-blue-400"
-                  placeholder="I'm a messeur"
-                />
-              </div>
 
-              <div>
-                <label className="block">Email</label>
-                <input
-                  type="text"
-                  className="w-full outline-none bg-gray-50 h-10  border-blue-400"
-                  placeholder="daniel.botsman@gmail.com"
-                />
-
-              </div>
-
-              <div>
-                <label className="block">Password</label>
-                <input
-                  type="password"
-                  className="w-full outline-none h-10 bg-gray-50 border-blue-400"
-                  placeholder="******"
-                />
-              </div>
-
-              <div>
-                <label className="block">Confrim password</label>
-                <input
-                  type="password"
-                  className="w-full outline-none h-10 bg-gray-50 border-blue-400"
-                  placeholder="******"
-                />
-              </div>
-            </form>
-            </div>
-  
-            <div className="pt-3">
-              <button className="block	w-3/4 items-center justify-center mx-auto text-white mt-2 bg-red-700 h-10 hover:bg-red-800">
-                Create an account
-              </button>
-            </div>
-
-            <h1 className="text-gray-500 mt-4 text-center">
-              Have an account? <span className="font-bold text-red-700">Sign in</span>
-            </h1>
-          </div>
-        </div>
-
-    </>
-  );
+  )
 }
+
+export default index
